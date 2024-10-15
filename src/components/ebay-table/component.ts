@@ -1,4 +1,4 @@
-import { AttrTriState } from "marko/tags-html";
+import { AttrString, AttrTriState } from "marko/tags-html";
 import { WithNormalizedProps } from "../../global";
 import { CheckboxEvent } from "../ebay-checkbox/component-browser";
 
@@ -12,9 +12,10 @@ export type TableSortEvent = {
     sorted: Record<TableColRowName, boolean>;
 };
 export interface TableHeader extends Omit<Marko.Input<"th">, `on${string}`> {
-    columnType?: string; // Use ColumnType after marko fix the ts error for attr tags
+    columnType?: "normal" | "numeric" | "row-header";
     name?: TableColRowName;
     sort?: TableSort | boolean;
+    href?: AttrString;
     renderBody: Marko.Body;
 }
 export interface TableCell
