@@ -81,6 +81,16 @@ export default {
                 },
             },
         },
+        onSort: {
+            action: "on-sort",
+            description: "Triggered on column sort",
+            table: {
+                category: "Events",
+                defaultValue: {
+                    summary: "{ sorted }",
+                },
+            },
+        },
     },
 };
 
