@@ -56,14 +56,14 @@ $ const {
                             thClass,
                         ]
                     >
+                        $ let sortEleAttr = {};
+                        $ if (href) {
+                            sortEleAttr = { href };
+                        } else if (sortOrder) {
+                            sortEleAttr = { type: "button" };
+                        }
                         <${href ? "a" : sortOrder ? "button" : null}
-                            ...(
-                                href
-                                    ? { href }
-                                    : {
-                                          type: "button",
-                                      }
-                            )
+                            ...sortEleAttr
                             on-click(href ? undefined : "sortColumn", name)
                         >
                             <${renderBody}/>
