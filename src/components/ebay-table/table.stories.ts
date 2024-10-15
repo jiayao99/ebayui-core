@@ -6,6 +6,8 @@ import defaultTemplate from "./examples/default.marko";
 import defaultCode from "./examples/default.marko?raw";
 import selectionTemplate from "./examples/selection.marko";
 import selectionCode from "./examples/selection.marko?raw";
+import sortTemplate from "./examples/sort.marko";
+import sortCode from "./examples/sort.marko?raw";
 
 export default {
     title: "data-display/table",
@@ -99,3 +101,4 @@ export const SelectionModeBasic = buildExtensionTemplate(
         a11ySelectRowText: "Select row",
     },
 );
+export const ColumnSorting = buildExtensionTemplate(sortTemplate, sortCode);

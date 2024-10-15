@@ -4,12 +4,18 @@ import { CheckboxEvent } from "../ebay-checkbox/component-browser";
 
 type TableColRowName = string | number;
 type TableSelectionState = "none-selected" | "all-selected" | "indeterminate";
+type TableSort = "asc" | "desc" | "none";
 export type TableSelectEvent = {
     selected: Record<TableColRowName, boolean>;
     selectionState?: TableSelectionState;
 };
+export type TableSortEvent = {
+    sorted: Record<TableColRowName, boolean>;
+};
 export interface TableHeader extends Omit<Marko.Input<"th">, `on${string}`> {
     columnType?: string; // Use ColumnType after marko fix the ts error for attr tags
+    name?: TableColRowName;
+    sort?: TableSort | boolean;
     renderBody: Marko.Body;
 }
 export interface TableCell
@@ -30,22 +36,26 @@ export interface TableInput extends Omit<Marko.Input<"div">, `on${string}`> {
     "a11y-select-all-text"?: string;
     "a11y-select-row-text"?: string;
     "on-select"?: (event: TableSelectEvent) => void;
+    "on-sort"?: (event: TableSortEvent) => void;
 }
 export interface Input extends WithNormalizedProps<TableInput> {}
 
 interface State {
     selected: Record<TableColRowName, boolean>;
+    sorted: Record<TableColRowName, TableSort | undefined>;
 }
 
 export default class EbayTable extends Marko.Component<Input, State> {
     onCreate() {
         this.state = {
             selected: {},
+            sorted: {},
         };
     }
 
     onInput(input: Input) {
         this.state.selected = this.getSelectedRowStateFromInput(input);
+        this.state.sorted = this.getSortedColStateFromInput(input);
     }
 
     getSelectedRowStateFromInput(input: Input) {
@@ -57,6 +67,19 @@ export default class EbayTable extends Marko.Component<Input, State> {
             }
         }
         return selected;
+    }
+
+    getSortedColStateFromInput(input: Input) {
+        const sorted: Record<TableColRowName, TableSort> = {};
+        for (const [i, header] of Object.entries([...input.header])) {
+            const name = header.name || i;
+            if (header.sort === true) {
+                sorted[name] = "none";
+            } else if (header.sort) {
+                sorted[name] = header.sort;
+            }
+        }
+        return sorted;
     }
 
     getSelectionState(input: Input): TableSelectionState {
@@ -115,5 +138,22 @@ export default class EbayTable extends Marko.Component<Input, State> {
         this.emit("select", {
             selected: this.state.selected,
         });
+    }
+
+    sortColumn(name: TableColRowName) {
+        const sort = this.state.sorted[name];
+        if (sort) {
+            if (sort === "asc") {
+                this.state.sorted[name] = "desc";
+            } else if (sort === "desc") {
+                this.state.sorted[name] = "none";
+            } else {
+                this.state.sorted[name] = "asc";
+            }
+            this.setStateDirty("sorted");
+            this.emit("sort", {
+                sorted: this.state.sorted,
+            });
+        }
     }
 }
