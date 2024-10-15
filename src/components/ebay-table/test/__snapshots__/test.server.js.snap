@@ -1554,7 +1554,6 @@ exports[`ebay-table > renders TableWithActions 1`] = `
               [33mclass[39m=[32m"select select--borderless"[39m
             [36m>[39m
               [36m<select[39m
-                [33mfluid[39m=[32m""[39m
                 [33mid[39m=[32m"s0-0-18[2[0]]-1[0]-select"[39m
               [36m>[39m
                 [36m<option[39m
@@ -1640,5 +1639,6 @@ exports[`ebay-table > renders TableWithActions 1`] = `
               [36m<button[39m
                 [33mclass[39m=[32m"icon-btn"[39m
                 [33mdata-ebayui[39m=[32m""[39m
-                [33mdata-marko[39m=[32m"{\\"onclick\\":\\"handleClick s0-0-18[3[0]]-3[0] false\\",\\"onkeydown\\":\\"handleKeydown s0-0-18[3[0]]-3[0] false\\",\\"onfocus\\":\\"handleFocus s0-0-18[3[0]]-3[0] false\\",\\"onblur\\":\\"handleBlu..."
+                [33mdata-marko[39m=[32m"{\\"onclick\\":\\"handleClick s0-0-18[3[0]]-3[0] false\\",\\"onkeydown\\":\\"handleKeydown s0-0-18[3[0]]-3[0] false\\",\\"onfocus\\":\\"handleFocus s0-0-18[3[0]]-3[0] false\\",\\"onblur\\":\\"handleBlur s0-0-18[3[0]]-3[0] false\\"}"[39m
+         ..."
 `;
