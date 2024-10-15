@@ -18,6 +18,7 @@ exports[`ebay-table > renders ColumnSorting 1`] = `
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
               [0mSeller[0m
+              [0m [0m
               [36m<svg[39m
                 [33maria-hidden[39m=[32m"true"[39m
                 [33mclass[39m=[32m"icon icon--12"[39m
@@ -46,6 +47,7 @@ exports[`ebay-table > renders ColumnSorting 1`] = `
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
               [0mItem[0m
+              [0m [0m
               [36m<svg[39m
                 [33maria-hidden[39m=[32m"true"[39m
                 [33mclass[39m=[32m"icon icon--12"[39m
@@ -74,6 +76,7 @@ exports[`ebay-table > renders ColumnSorting 1`] = `
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
               [0mStatus[0m
+              [0m [0m
               [36m<svg[39m
                 [33maria-hidden[39m=[32m"true"[39m
                 [33mclass[39m=[32m"icon icon--12"[39m
@@ -92,6 +95,7 @@ exports[`ebay-table > renders ColumnSorting 1`] = `
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
               [0mList Price[0m
+              [0m [0m
               [36m<svg[39m
                 [33maria-hidden[39m=[32m"true"[39m
                 [33mclass[39m=[32m"icon icon--12"[39m
@@ -110,6 +114,7 @@ exports[`ebay-table > renders ColumnSorting 1`] = `
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
               [0mQuantity Available[0m
+              [0m [0m
               [36m<svg[39m
                 [33maria-hidden[39m=[32m"true"[39m
                 [33mclass[39m=[32m"icon icon--12"[39m
@@ -128,6 +133,7 @@ exports[`ebay-table > renders ColumnSorting 1`] = `
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
               [0mOrders[0m
+              [0m [0m
               [36m<svg[39m
                 [33maria-hidden[39m=[32m"true"[39m
                 [33mclass[39m=[32m"icon icon--12"[39m
@@ -146,6 +152,7 @@ exports[`ebay-table > renders ColumnSorting 1`] = `
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
               [0mWatchers[0m
+              [0m [0m
               [36m<svg[39m
                 [33maria-hidden[39m=[32m"true"[39m
                 [33mclass[39m=[32m"icon icon--12"[39m
@@ -164,6 +171,7 @@ exports[`ebay-table > renders ColumnSorting 1`] = `
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
               [0mProtection[0m
+              [0m [0m
               [36m<svg[39m
                 [33maria-hidden[39m=[32m"true"[39m
                 [33mclass[39m=[32m"icon icon--12"[39m
@@ -182,6 +190,7 @@ exports[`ebay-table > renders ColumnSorting 1`] = `
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
               [0mShipping[0m
+              [0m [0m
               [36m<svg[39m
                 [33maria-hidden[39m=[32m"true"[39m
                 [33mclass[39m=[32m"icon icon--12"[39m
@@ -200,6 +209,7 @@ exports[`ebay-table > renders ColumnSorting 1`] = `
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
               [0mDelivery[0m
+              [0m [0m
               [36m<svg[39m
                 [33maria-hidden[39m=[32m"true"[39m
                 [33mclass[39m=[32m"icon icon--12"[39m
@@ -538,6 +548,7 @@ exports[`ebay-table > renders ColumnSortingWithLink 1`] = `
               [33mhref[39m=[32m"https://www.ebay.com"[39m
             [36m>[39m
               [0mSeller[0m
+              [0m [0m
               [36m<svg[39m
                 [33maria-hidden[39m=[32m"true"[39m
                 [33mclass[39m=[32m"icon icon--12"[39m
