@@ -77,7 +77,7 @@ export default {
             table: {
                 category: "Events",
                 defaultValue: {
-                    summary: "{ selected }",
+                    summary: "{ selected, allSelected }",
                 },
             },
         },
