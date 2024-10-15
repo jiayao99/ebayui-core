@@ -55,6 +55,13 @@ $ const {
                             columnType === "numeric" && "table__cell--numeric",
                             thClass,
                         ]
+                        aria-sort=(
+                            sortOrder === "asc"
+                                ? "ascending"
+                                : sortOrder === "desc"
+                                    ? "descending"
+                                    : undefined
+                        )
                     >
                         $ let sortEleAttr = {};
                         $ if (href) {

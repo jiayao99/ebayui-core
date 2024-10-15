@@ -11,6 +11,7 @@ exports[`ebay-table > renders ColumnSorting 1`] = `
       [36m<thead>[39m
         [36m<tr>[39m
           [36m<th[39m
+            [33maria-sort[39m=[32m"ascending"[39m
             [33mclass[39m=[32m"table__cell"[39m
           [36m>[39m
             [36m<button[39m
@@ -530,6 +531,7 @@ exports[`ebay-table > renders ColumnSortingWithLink 1`] = `
       [36m<thead>[39m
         [36m<tr>[39m
           [36m<th[39m
+            [33maria-sort[39m=[32m"ascending"[39m
             [33mclass[39m=[32m"table__cell"[39m
           [36m>[39m
             [36m<a[39m
